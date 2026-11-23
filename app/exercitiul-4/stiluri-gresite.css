@@ -1,0 +1,41 @@
+/* Varianta primită în lucrare, cu cele două greșeli de stil.
+   Niciuna nu dă eroare în consolă: amândouă se văd doar în fila Elements,
+   unde declarația care nu se aplică apare tăiată cu o linie. */
+
+.panou {
+  margin-bottom: 1.4rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid #d8dbe0;
+  border-radius: 10;      /* greșeala 6: lipsește unitatea px */
+}
+
+.panou h2 {
+  margin-bottom: 0.6rem;
+  font-size: 1.1rem;
+}
+
+.panou label {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.panou input {
+  width: 70px;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid #c3c7cf;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.panou ul {
+  margin: 0.7rem 0 0 0;
+  padding-left: 1.1rem;
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+.panou h2 {        /* greșeala 7: a doua regulă pentru același selector,
+                      scrisă mai jos, deci câștigă; margin: 0 anulează
+                      margin-bottom: 0.6rem de mai sus */
+  margin: 0;
+}
